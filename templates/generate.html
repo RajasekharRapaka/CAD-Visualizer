@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Customize Your Image</h1>
+        <p>Select the environment, lighting, and angle for your CAD model.</p>
+    </header>
+
+    <main>
+        <form action="/generate" method="POST" class="generate-form">
+            <input type="hidden" name="file_path" value="{{ file_path }}">
+
+            <label for="environment">Environment:</label>
+            <select name="environment" id="environment" required>
+                <option value="urban">Urban</option>
+                <option value="nature">Nature</option>
+                <option value="studio">Studio</option>
+            </select>
+
+            <label for="lighting">Lighting:</label>
+            <select name="lighting" id="lighting" required>
+                <option value="natural">Natural</option>
+                <option value="soft">Soft</option>
+                <option value="dramatic">Dramatic</option>
+            </select>
+
+            <label for="angle">Angle:</label>
+            <select name="angle" id="angle" required>
+                <option value="front">Front</option>
+                <option value="side">Side</option>
+                <option value="top">Top</option>
+            </select>
+
+            <button type="submit">Generate Image</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 </strong>CAD Visualizer</strong> | All rights reserved.</p>
+        <p>Powered by </strong>Replicate and Stable Diffusion</strong> | Designed by </strong>Raja Sekhar Rapaka</strong>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

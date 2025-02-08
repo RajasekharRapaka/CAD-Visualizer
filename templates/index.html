@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Left Side: How to Use Button and Instructions -->
+    <div class="how-to-use-container">
+        <button id="how-to-use-btn">How to Use</button>
+        <div id="instructions-box" class="instructions-box">
+            <h2>How to Use CAD Visualizer</h2>
+            <p>Welcome to CAD Visualizer! Follow these simple steps to transform your CAD models into stunning photorealistic images:</p>
+            <ol>
+                <li><strong>Upload your CAD model:</strong> Click the "Upload" button and select your CAD file (e.g., .stl, .obj, .dwg, .dxf, .iges, .iges, .step, .stp, .3mf, .glb, .gltf, .ply, .off, .mtl, .blend).</li>
+                <li><strong>Customize your image:</strong> Choose the environment, lighting, and angle for your model.</li>
+                <li><strong>Generate the image:</strong> Click "Generate Image" to create a photorealistic render.</li>
+                <li><strong>View and download:</strong> Once generated, you can view the image in full resolution or download it.</li>
+                <li><strong>Sample CAD Files for Testing:</strong> Explore a collection of sample CAD files for testing purposes at <a href="https://pimpmydrawing.com/cars" target="_blank" rel="noopener noreferrer">Pimp My Drawing - Cars</a>.</li>
+            </ol>
+            <p>Enjoy creating beautiful visuals with CAD Visualizer!</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <h1>CAD Visualizer</h1>
+        <p>Transform your CAD models into stunning photorealistic images.</p>
+    </header>
+
+    <main>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <label for="file">Upload your CAD model:</label>
+            <input type="file" name="file" id="file" accept=".stl,.obj,.fbx,.dae,.step,.stp,.dwg,.dxf,.3mf,.glb,.gltf,.ply,.off,.iges,.mtl,.blend" required>
+            <button type="submit">Upload & Proceed</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 </strong>CAD Visualizer</strong> | All rights reserved.</p>
+        <p>Powered by </strong>Replicate and Stable Diffusion</strong> | Designed by </strong>Raja Sekhar Rapaka</strong></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

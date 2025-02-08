@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Main Content -->
+    <header>
+        <h1>Generated Image</h1>
+        <p>Here's the photorealistic image of your CAD model.</p>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <img src="{{ image_url }}" alt="Generated Image" class="wallpaper-image">
+        </div>
+
+        <!-- Generate Another Button Container -->
+        <div class="generate-another-container">
+            <a href="/" class="generate-another-btn">Generate Another</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CAD Visualizer | All rights reserved.</p>
+        <p>Powered by Replicate and Stable Diffusion | Designed by Raja Sekhar Rapaka</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
